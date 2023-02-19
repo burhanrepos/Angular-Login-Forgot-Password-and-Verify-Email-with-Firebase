@@ -25,9 +25,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -91,8 +94,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "angular-crud-firebase:build:production",
+            "firebaseProject": "student-mangement-system-48aba",
+            "firebaseHostingSite": "student-mangement-system-48aba"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3afea6ec-06fd-4293-81d6-ddda7794a842"
   }
 }
